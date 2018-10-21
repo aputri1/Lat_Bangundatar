@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="bangun-datar">
+			<button class="bangun persegi" onclick="persegi()">Persegi</button>
+			<button class="bangun pPanjang" onclick="pPanjang()">Persegi Panjang</button>
+			<button class="bangun segitiga" onclick="segitiga()">Segitiga</button>
+			<button class="bangun trapesium" onclick="trapesium()">Trapesium</button>
+			<button class="bangun layang" onclick="layang()">Layang-layang</button>
+		</div>
+	</div>
+
+
+	<script>
+		function persegi() {
+			var sisi = prompt("Masukkan sisi:");
+			if (sisi == "" || sisi == null) {
+					alert("Anda belum memasukkan sisi")
+				}
+			else {
+				var luas = sisi * sisi;
+				alert(luas);
+			}
+			if(confirm("Ngulangin lagi hitungnya?")) {
+				var sisi = prompt("Masukkan sisi:");
+				if (sisi == "" || sisi == null) {
+					alert("Anda belum memasukkan sisi")
+				}
+				else {
+					var luas = sisi * sisi;
+					alert(luas);
+				}	
+			}
+			else {
+				alert("Sudahkan?")
+			}
+		};
+		function pPanjang() {
+			var panjang = prompt("Masukkan panjang:");
+			var lebar = prompt("Masukkan lebar:");
+			if (panjang == "" || panjang == null || lebar == "" || lebar == null) {
+					alert("Anda belum memasukkan panjang atau lebar")
+				}
+			else {
+				var luas = panjang * lebar;
+				alert(luas);
+			}
+			if(confirm("Ngulangin lagi hitungnya?")) {
+				var panjang = prompt("Masukkan panjang:");
+				var lebar = prompt("Masukkan lebar:");
+				if (panjang == "" || panjang == null || lebar == "" || lebar == null) {
+					alert("Anda belum memasukkan panjang atau lebar")
+				}
+				else {
+					var luas = panjang * lebar;
+					alert(luas);
+				}	
+			}
+			else {
+				alert("Sudahkan?")
+			}
+		};
+		function segitiga() {
+			var alas = prompt("Masukkan alas:");
+			var tinggi = prompt("Masukkan tinggi:");
+			if (alas == "" || alas == null || tinggi == "" || tinggi == null) {
+					alert("Anda belum memasukkan alas atau tinggi")
+				}
+			else {
+				var luas = alas * tinggi / 2;
+				alert(luas);
+			}
+			if(confirm("Ngulangin lagi hitungnya?")) {
+				var alas = prompt("Masukkan alas:");
+				var tinggi = prompt("Masukkan tinggi:");
+				if (alas == "" || alas == null || tinggi == "" || tinggi == null) {
+						alert("Anda belum memasukkan alas atau tinggi")
+					}
+				else {
+					var luas = alas * tinggi / 2;
+					alert(luas);
+				}	
+			}
+			else {
+				alert("Sudahkan?")
+			}
+		};
+		function trapesium() {
+			var a = prompt("Masukkan sisi a:");
+			var b =prompt("Masukkan sisi b:");
+			var tinggi = prompt("Masukkan tinggi:");
+			if (a == "" || a == null || b == "" || b == null || tinggi == "" || tinggi == null) {
+					alert("Anda belum memasukkan sisi a atau sisi b atau tinggi")
+				}
+			else {
+				var luas = 0.5 * (a+b) * tinggi;
+				alert(luas);
+			}
+			if(confirm("Ngulangin lagi hitungnya?")) {
+				var a = prompt("Masukkan sisi a:");
+				var b =prompt("Masukkan sisi b:");
+				var tinggi = prompt("Masukkan tinggi:");
+				if (a == "" || a == null || b == "" || b == null || tinggi == "" || tinggi == null) {
+						alert("Anda belum memasukkan sisi a, sisi b atau tinggi")
+					}
+				else {
+					var luas = 0.5 * ((a*1)+(b*1)) * tinggi;
+					alert(luas);
+				}
+			}
+			else {
+				alert("Sudahkan?")
+			}
+		};
+		function layang() {
+			var d1 = prompt("Masukkan diagonal 1:");
+			var d2 =prompt("Masukkan diagonal 2:");
+			if (d1 == "" || d1 == null || d2 == "" || d2 == null) {
+					alert("Anda belum memasukkan diagonal 1 atau diagonal 2")
+				}
+			else {
+				var luas = 0.5 * (d1*d2);
+				alert(luas);
+			}
+			if(confirm("Ngulangin lagi hitungnya?")) {
+				var d1 = prompt("Masukkan diagonal 1:");
+				var d2 =prompt("Masukkan diagonal 2:");
+				if (d1 == "" || d1 == null || d2 == "" || d2 == null) {
+						alert("Anda belum memasukkan diagonal 1 atau diagonal 2")
+					}
+				else {
+					var luas = 0.5 * (d1*d2);
+					alert(luas);
+				}
+			}
+			else {
+				alert("Sudahkan?")
+			}
+		};
+	</script>
+</body>
+</html>
